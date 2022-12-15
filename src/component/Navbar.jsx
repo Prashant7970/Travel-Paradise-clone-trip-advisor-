@@ -3,7 +3,7 @@ import {
   Box,
   Flex,
   Avatar,
-
+Text,
   Button,
   Menu,
   MenuButton,
@@ -17,11 +17,14 @@ Image,
   Center,
 
 
-} from '@chakra-ui/react';
-import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
+} from '@chakra-ui/react';
+import {Link} from "react-router-dom"
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import {FiHeart,FiBell,FiEdit2} from 'react-icons/fi'
+import {BsCart3} from 'react-icons/bs'
 // const NavLink = ({ children }: { children: ReactNode }) => (
-//   <Link
+//   <Link,
 //     px={2}
 //     py={1}
 //     rounded={'md'}
@@ -38,17 +41,21 @@ export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
  
   return (
-    <>
-      <Box bg={useColorModeValue('#062424','gray.100', 'gray.900')} px={4}>
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-        <Box > <Image w={"70px"} src={'./logo.jpg'} alt='logo' /> <span>Let's Travel Paradise</span>  </Box>
+    < >
+      <Box bg={useColorModeValue('white','gray.100', 'gray.900')}  border={"1px solid gray"} px={4}>
+        <Flex h={16} w={"80%"} margin={"auto"} alignItems={'center'} justifyContent={'space-between'}>
+        <Link to="/">  <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+           <Box > <Image borderRadius={"60%"} w={"70px"} src={'./logo.jpg'} alt='logo' />  </Box><Text color={"black"} fontWeight={"bold"} fontSize={"25px"} fontFamily={"sans-serif"}>Travel Paradise</Text> 
+            </Flex></Link>
+        
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
-            <Button>Review</Button>
-            <Button>Trips</Button>
-            <Button>Alerts</Button>
-              <Button onClick={toggleColorMode}>
+            <Button borderRadius={"17px"} bg={"white"}><FiEdit2 /> <Text ml={"10px"}> Review</Text></Button>
+            <Button borderRadius={"17px"} bg={"white"}> <FiHeart /> <Text ml={"10px"}> Trips</Text></Button>
+            <Button borderRadius={"17px"} bg={"white"}>
+              <FiBell/><Text ml={"10px"}> Alerts</Text></Button>
+              <Button borderRadius={"17px"} bg={"white"} onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
              
@@ -84,7 +91,8 @@ export default function Navbar() {
                   <MenuItem>Logout</MenuItem>
                 </MenuList>
               </Menu>
-              <Button>Basket</Button>
+              <Button borderRadius={"17px"} bg={"white"}> <BsCart3/><Text ml={"10px"}> Basket</Text></Button>
+             
             </Stack>
           </Flex>
         </Flex>

@@ -18,6 +18,7 @@ Image,
 
 
 
+
 } from '@chakra-ui/react';
 import {Link} from "react-router-dom"
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
@@ -51,11 +52,13 @@ export default function Navbar() {
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
-            <Button borderRadius={"17px"} bg={"white"}><FiEdit2 /> <Text ml={"10px"}> Review</Text></Button>
-            <Button borderRadius={"17px"} bg={"white"}> <FiHeart /> <Text ml={"10px"}> Trips</Text></Button>
-            <Button borderRadius={"17px"} bg={"white"}>
+            <Button borderRadius={"17px"} color={"black"} bg={"white"}><FiEdit2 /> <Text ml={"10px"}> Review</Text></Button>
+            <Button borderRadius={"17px"} color={"black"} bg={"white"}> <FiHeart /> <Text ml={"10px"}> Trips</Text></Button>
+            <Button borderRadius={"17px"} color={"black"} bg={"white"}>
               <FiBell/><Text ml={"10px"}> Alerts</Text></Button>
-              <Button borderRadius={"17px"} bg={"white"} onClick={toggleColorMode}>
+              <Button borderRadius={"17px"} color={"black"} bg={"white"} onClick={()=>{toggleColorMode()
+             
+              }}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
              
@@ -87,11 +90,11 @@ export default function Navbar() {
                   <br />
                   <MenuDivider />
                   <MenuItem>Your Servers</MenuItem>
-                  <MenuItem>Account Settings</MenuItem>
+                  <Link to="/login"><MenuItem>Login</MenuItem></Link>
                   <MenuItem>Logout</MenuItem>
                 </MenuList>
               </Menu>
-              <Button borderRadius={"17px"} bg={"white"}> <BsCart3/><Text ml={"10px"}> Basket</Text></Button>
+              <Button borderRadius={"17px"} color={"black"} bg={"white"}> <BsCart3/><Text ml={"10px"}> Basket</Text></Button>
              
             </Stack>
           </Flex>

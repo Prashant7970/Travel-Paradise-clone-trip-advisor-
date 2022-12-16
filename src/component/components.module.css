@@ -10,9 +10,15 @@
     
 }
 .slider{
-    width: 300px;
-    height: 200px;
-    background-color: black;
+  width: 25%;
+   
+   
     margin: 5px;
    display: inline-block;
+
+}
+
+.slider:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }

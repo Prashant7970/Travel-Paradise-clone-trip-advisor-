@@ -10,8 +10,49 @@
 }
 .sliding1{
     width: 100%;
-    height: 300px;
+   margin: 15px 0px;
     background-color: white;
     white-space: nowrap;
     overflow-x: scroll;
+   
+}
+.sliding1::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+.sliding3{
+    background-color: #faf1ed;
+    width:100%;
+    padding: 20px;
+}
+.sliding4{
+    width: 80%;
+  
+    margin: 30px auto;
+    margin-top: 80px;
+}
+.sliding3sub, .sliding4sub{
+    width: 70%;
+    margin: 15px auto;
+   
+     background-color: white;
+     white-space: nowrap;
+     overflow-x: scroll;
+}
+
+.sliding4sub{
+    width: 100%;
+}
+.sliding4sub::-webkit-scrollbar{
+    display: none;
+}
+.sliding3sub>div{
+    width: 33%;
+ 
+}
+.sliding3sub::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.footerimg{
+    margin: 90px 0px;
 }

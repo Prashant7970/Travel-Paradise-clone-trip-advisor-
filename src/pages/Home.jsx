@@ -1,20 +1,24 @@
 import NavButton from "../component/HeaderButton";
-
+import {Link} from "react-router-dom"
 
 import { Input,Heading,  Button,useDisclosure,Modal,ModalOverlay,ModalContent,ModalFooter,  Text,ModalBody,ModalHeader} from "@chakra-ui/react"
 import styles from "./Pages.module.css"
 import RecentButton from "../component/Recentbtn";
 import Slider from "../component/Slider";
-
+import {data as array} from "../data"
+import Footer from "../component/footer"
 
 export default function Home(){
     const { isOpen, onOpen, onClose } = useDisclosure()
     function handlemodal(){
         onOpen()
     }
+   
 
-    const data=[1,2,3,4,5,6,7,8,9,10]
+    const data=array.local
+    
     return (
+      <div>
     <div className={styles.headerimage}> 
         <NavButton handlemodal={handlemodal}/>
         <div style={{width:"90%", margin:"auto"}} >
@@ -65,24 +69,68 @@ export default function Home(){
   </Heading>
         <RecentButton/>
 
-
+        <Heading as='h4' textAlign={"left"} fontFamily={"sans-serif"} size='md'>Ways to tour patna</Heading>
+        <Text textAlign={"left"} >Book these experiences for a close-up look at Patna</Text>
 <div className={styles.sliding1}>
+  
 {data.map((item)=>{
-    return <Slider/>
+    return <Link key={item.id} to={`/place/${item.id}`}> <Slider  title={item.title} content={item.content} img={item.imgUrl}/></Link>
 })}
 </div>
 
-        <div className={styles.sliding1}>
+
+{/* \*sliding window 2*\ */}
+<Heading as='h4' textAlign={"left"} mt={"60px"} fontFamily={"sans-serif"} size='md'>Ring in the new year</Heading>
+        <Text textAlign={"left"} >New Year's Eve spots to welcome 2023</Text>
+<div className={styles.sliding1}>
+  
 {data.map((item)=>{
-    return <Slider/>
+    return  <Slider key={item.id} title={item.title} content={item.content} img={item.imgUrl}/>
 })}
 </div>
 
+
+ 
         
      
         
      </div>  
 
+     {/* sliding window 3 */}
+<div className={styles.sliding3}>
+<Heading  textAlign={"center"} fontFamily={"Trip Sans VF"} paddingTop={"30px"} fontSize={"25px"}>More to explore</Heading>
+       
+<div className={styles.sliding3sub}>
+  
+{data.map((item)=>{
+    return <Slider key={item.id} title={item.title} content={item.content} img={item.imgUrl}/>
+})}
+</div>
+</div>
+
+
+{/* sliding window 4 */}
+
+<div className={styles.sliding4}>
+
+
+
+<Heading as='h4' textAlign={"left"} fontFamily={"sans-serif"} size='md'>Top destinations for beach lovers</Heading>
+        <Text textAlign={"left"} >Recommended based on your activity</Text>
+<div className={styles.sliding4sub}>
+  
+{data.map((item)=>{
+    return <Slider key={item.id} title={item.title} content={item.content} img={item.imgUrl}/>
+})}
+</div>
+
+</div>
+<div className={styles.footerimg}>
+  <img src="./Footer.png" alt="" />
+</div>
+<Footer/>
+
+     </div>
 
     );
 }

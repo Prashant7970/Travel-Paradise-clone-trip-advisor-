@@ -1,0 +1,18 @@
+.btn{
+    padding: 30px 40px;
+
+    width: 25%;
+}
+
+.btn:hover{
+    background-color: teal;
+    color: rgb(63, 220, 63);
+    
+}
+.slider{
+    width: 300px;
+    height: 200px;
+    background-color: black;
+    margin: 5px;
+   display: inline-block;
+}

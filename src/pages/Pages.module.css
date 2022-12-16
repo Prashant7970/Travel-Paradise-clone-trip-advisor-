@@ -1,0 +1,17 @@
+.headerimage{
+    width: 80%;
+    margin:10px auto;
+}
+.input{
+    width: 70%;
+    margin: 0px auto;
+    position: relative;
+    bottom: 200px;
+}
+.sliding1{
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    white-space: nowrap;
+    overflow-x: scroll;
+}

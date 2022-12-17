@@ -11,7 +11,7 @@ Text,
   MenuItem,
   MenuDivider,
 Image,
-  useColorModeValue,
+ 
   Stack,
   useColorMode,
   Center,
@@ -20,6 +20,7 @@ Image,
 
 
 } from '@chakra-ui/react';
+import styles from "./components.module.css"
 import {Link} from "react-router-dom"
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {FiHeart,FiBell,FiEdit2} from 'react-icons/fi'
@@ -42,8 +43,8 @@ export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
  
   return (
-    < >
-      <Box bg={useColorModeValue('white','gray.100', 'gray.900')}  border={"1px solid gray"} px={4}>
+    <div className={styles.nav} >
+      <Box>
         <Flex h={16} w={"80%"} margin={"auto"} alignItems={'center'} justifyContent={'space-between'}>
         <Link to="/">  <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
            <Box > <Image borderRadius={"60%"} w={"70px"} src={'./logo.jpg'} alt='logo' />  </Box><Text color={"black"} fontWeight={"bold"} fontSize={"25px"} fontFamily={"sans-serif"}>Travel Paradise</Text> 
@@ -100,6 +101,6 @@ export default function Navbar() {
           </Flex>
         </Flex>
       </Box>
-    </>
+    </div>
   );
 }

@@ -22,3 +22,12 @@
     cursor: pointer;
     text-decoration: underline;
 }
+
+.nav{
+    background-color: white;
+    padding: 4px;
+  
+    position: fixed;
+    top: 0;
+    width: 100%;
+}

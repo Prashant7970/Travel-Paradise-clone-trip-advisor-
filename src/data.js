@@ -3,7 +3,7 @@
 
 export  const data={
 "local":[
-    {id: 1, title: 'Pinddaan at Gaya', content: 'from $1100 per group', imgUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/60/74/be/caption.jpg?w=300&h=300&s=1'},
+    {id: 1, title: 'Pinddaan at Gaya', des:"It was at this place, sitting under a tree Gautama Buddha attained enlightenment about 2600 years back. This quaint and divine town is therefore an important pilgrimage spot for the Buddhists. Visit its beautiful monasteries and temples and just experience the warmth and serenity like never before.", content: 'from $1100 per group', imgUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/60/74/be/caption.jpg?w=300&h=300&s=1'},
     {id: 2, title: 'Full-Day Bodh Gaya Private Tour', content: 'from $1300 per adult', imgUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/38/28/af/caption.jpg?w=300&h=300&s=1'},
     {id: 3, title: 'Nalanda Rajgir and Bodh Gaya from Patna', content: 'from $1340 per adult', imgUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f8/2a/bf/caption.jpg?w=300&h=300&s=1'},
     {id: 4, title: 'Buddhist Tour From The Birth To Death', content: 'from $1500 per adult', imgUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5f/26/24/caption.jpg?w=300&h=300&s=1'},
@@ -14,6 +14,14 @@ export  const data={
     {id: 9, title: 'Spiritual Tour of Bodh Gaya & Varanasi', content: 'from $9000 per adult', imgUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/60/87/ec/caption.jpg?w=300&h=300&s=1'},
    
   ],
+  "nation":[
+    {id:10,title:''}
+
+
+
+
+
+  ]
 
 
 

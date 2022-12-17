@@ -6,13 +6,13 @@ import {
     Input,
     Checkbox,
     Stack,
-    Link,
+  
     Button,
     Heading,
     Text,
     useColorModeValue,
   } from '@chakra-ui/react';
-  
+  import {Link} from "react-router-dom"
   export default function Login() {
     return (
       <Flex
@@ -24,7 +24,7 @@ import {
           <Stack align={'center'}>
             <Heading fontSize={'4xl'}>Sign in to your account</Heading>
             <Text fontSize={'lg'} color={'gray.600'}>
-              to enjoy all of our cool <Link color={'blue.400'}>features</Link> ✌️
+              to enjoy all of our cool  <Link  color={'blue.400'}>features</Link> ✌️
             </Text>
           </Stack>
           <Box
@@ -47,7 +47,7 @@ import {
                   align={'start'}
                   justify={'space-between'}>
                   <Checkbox>Remember me</Checkbox>
-                  <Link color={'blue.400'}>Forgot password?</Link>
+                  <Link to="/forget" color={'blue.400'}>Forgot password?</Link>
                 </Stack>
                 <Button
                   bg={'blue.400'}

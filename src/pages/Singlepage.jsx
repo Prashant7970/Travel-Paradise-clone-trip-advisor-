@@ -12,7 +12,8 @@ import {
     SimpleGrid,
     StackDivider,
     useColorModeValue,
-  
+  ListItem,
+  List
    
   } from '@chakra-ui/react';
   import {data as array} from "../data"
@@ -86,6 +87,50 @@ let {id}=useParams()
                   reprehenderit velit? Natus, totam.
                 </Text>
               </VStack>
+              <Box>
+              <Text
+                fontSize={{ base: '16px', lg: '18px' }}
+                color={useColorModeValue('yellow.500', 'yellow.300')}
+                fontWeight={'500'}
+                textTransform={'uppercase'}
+                mb={'4'}>
+               Availability Criteria
+              </Text>
+
+              <List spacing={2}>
+                <ListItem>
+                  <Text as={'span'} fontWeight={'bold'}>
+                    Ages:
+                  </Text>{' '}
+                  0-120
+                </ListItem>
+                <ListItem>
+                  <Text as={'span'} fontWeight={'bold'}>
+                    Duration:
+                  </Text>{' '}
+                  2days
+                </ListItem>
+                <ListItem>
+                  <Text as={'span'} fontWeight={'bold'}>
+                    Start time:
+                  </Text>{' '}
+                  Check Availability
+                </ListItem>
+                <ListItem>
+                  <Text as={'span'} fontWeight={'bold'}>
+                   Ticket Type:
+                  </Text>{' '}
+                  Mobile
+                </ListItem>
+                <ListItem>
+                  <Text as={'span'} fontWeight={'bold'}>
+                    Language:
+                  </Text>{' '}
+                  English,Chineese
+                </ListItem>
+               
+              </List>
+            </Box>
               
              
             </Stack>

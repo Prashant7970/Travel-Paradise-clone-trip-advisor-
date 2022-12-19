@@ -10,12 +10,16 @@
     
 }
 .slider{
+ 
   width: 25%;
    
-   
-    margin: 5px;
+    margin: 2px;
    display: inline-block;
 
+}
+.slider>img{
+    width: 100%;
+ height: 300px;
 }
 
 .slider:hover{
@@ -26,7 +30,7 @@
 .nav{
     background-color: white;
     padding: 4px;
-  
+  z-index: 20;
     position: fixed;
     top: 0;
     width: 100%;

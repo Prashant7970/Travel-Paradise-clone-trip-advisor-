@@ -45,7 +45,7 @@
 .sliding4sub::-webkit-scrollbar{
     display: none;
 }
-.sliding3sub>div{
+.sliding3sub div{
     width: 33%;
  
 }
@@ -55,4 +55,14 @@
 
 .footerimg{
     margin: 90px 0px;
+}
+.righticon{
+   font-size: 40px;
+   position: relative;
+   left: 1250px;
+   bottom: 200px;
+   
+  
+  
+
 }

@@ -4,6 +4,7 @@ import Home from "../pages/Home"
 import Login from "../pages/login"
 
 import SinglePage from "../pages/Singlepage"
+import PrivateRoute from "./PrivateRoute"
 
 
 
@@ -14,7 +15,7 @@ export default function Allroutes(){
         <Routes>
 <Route path="/" element={<Home/>} />
 <Route path="/login" element={<Login/>}/>
-<Route path="/place/:id" element={<SinglePage/>}/>
+<Route path="/place/:id" element={<PrivateRoute><SinglePage/></PrivateRoute>}/>
 <Route path="/forget" element={<Forgot/>}/>
 
 <Route/>

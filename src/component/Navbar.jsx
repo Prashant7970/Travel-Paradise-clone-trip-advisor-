@@ -25,6 +25,8 @@ import {Link} from "react-router-dom"
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {FiHeart,FiBell,FiEdit2} from 'react-icons/fi'
 import {BsCart3} from 'react-icons/bs'
+import { useContext } from 'react';
+import { AuthContext } from '../context/Authcontext';
 // const NavLink = ({ children }: { children: ReactNode }) => (
 //   <Link,
 //     px={2}
@@ -41,6 +43,7 @@ import {BsCart3} from 'react-icons/bs'
 
 export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
+  const {handlelogin}=useContext(AuthContext)
  
   return (
     <div className={styles.nav} >
@@ -92,7 +95,7 @@ export default function Navbar() {
                   <MenuDivider />
                   <MenuItem>Your Servers</MenuItem>
                   <Link to="/login"><MenuItem>Login</MenuItem></Link>
-                  <MenuItem>Logout</MenuItem>
+                  <MenuItem ><Button w={"100%"} onClick={handlelogin}> Logout</Button></MenuItem>
                 </MenuList>
               </Menu>
               <Button borderRadius={"17px"} color={"black"} bg={"white"}> <BsCart3/><Text ml={"10px"}> Basket</Text></Button>

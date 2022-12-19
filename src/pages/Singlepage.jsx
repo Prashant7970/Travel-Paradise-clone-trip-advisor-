@@ -19,23 +19,40 @@ import {
   import {data as array} from "../data"
 
 import { useParams } from 'react-router-dom';
+import Statistics from '../component/statics';
+import SmallFooter from '../component/smallfooter';
+
   
 
 
   export default function SinglePage() {
-let {id}=useParams()
 
-    let obj=array.local.filter((item)=>{
+
+let {id}=useParams()
+let search;
+if(id<10){
+search=array.local
+}else if(id<18){
+  search=array.abroad
+}else if(id<27){
+  search=array.global
+}else{
+  search=array.beach
+}
+console.log(search)
+    let obj=search.filter((item)=>{
         
         return item.id===Number(id)
     })
     console.log(obj)
     return (
       <Container maxW={'7xl'}>
+     
         <SimpleGrid
-          columns={{ base: 1, lg: 1 }}
+          columns={{ base: 1, lg: 2 }}
           spacing={{ base: 8, md: 10 }}
           py={{ base: 18, md: 24 }}>
+            
           <Flex>
             <Image
               rounded={'md'}
@@ -80,12 +97,7 @@ let {id}=useParams()
                   fontWeight={'300'}>
                  {obj[0].des}
                 </Text>
-                <Text fontSize={'lg'}>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-                  aliquid amet at delectus doloribus dolorum expedita hic, ipsum
-                  maxime modi nam officiis porro, quae, quisquam quos
-                  reprehenderit velit? Natus, totam.
-                </Text>
+                
               </VStack>
               <Box>
               <Text
@@ -153,10 +165,11 @@ let {id}=useParams()
   
             <Stack direction="row" alignItems="center" justifyContent={'center'}>
             
-             
+             <Statistics/>
             </Stack>
           </Stack>
         </SimpleGrid>
+        <SmallFooter/>
       </Container>
     );
   }

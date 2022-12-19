@@ -12,9 +12,41 @@ import {
     Text,
     useColorModeValue,
   } from '@chakra-ui/react';
+import { useState } from 'react';
+import { useContext } from 'react';
   import {Link} from "react-router-dom"
+import SmallFooter from '../component/smallfooter';
+import { AuthContext } from '../context/Authcontext';
+import axios from "axios"
   export default function Login() {
+    const {handlelogin}=useContext(AuthContext)
+const [email,setemail]=useState("")
+const [password,setpassword]=useState("")
+ function handlechange(e){
+  let val=e.target.value 
+  e.target.type==="email"?setemail(val):setpassword(val)
+  
+
+
+ }
+
+
+    function handlesignin(){
+
+axios.post(`https://reqres.in/api/login`,{
+
+    email:email,
+    password:password
+ 
+}).then((res)=>{
+  res.status===200?handlelogin():console.log(res)
+})
+
+
+    }
+
     return (
+      <>
       <Flex
         minH={'100vh'}
         align={'center'}
@@ -35,11 +67,11 @@ import {
             <Stack spacing={4}>
               <FormControl id="email">
                 <FormLabel>Email address</FormLabel>
-                <Input type="email" />
+                <Input onChange={handlechange} type="email" />
               </FormControl>
               <FormControl id="password">
                 <FormLabel>Password</FormLabel>
-                <Input type="password" />
+                <Input onChange={handlechange} type="password" />
               </FormControl>
               <Stack spacing={10}>
                 <Stack
@@ -50,6 +82,7 @@ import {
                   <Link to="/forget" color={'blue.400'}>Forgot password?</Link>
                 </Stack>
                 <Button
+                onClick={handlesignin}
                   bg={'blue.400'}
                   color={'white'}
                   _hover={{
@@ -61,6 +94,9 @@ import {
             </Stack>
           </Box>
         </Stack>
+
       </Flex>
+      <SmallFooter/>
+      </>
     );
   }

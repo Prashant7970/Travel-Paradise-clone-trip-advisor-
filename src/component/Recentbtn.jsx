@@ -16,7 +16,7 @@ export default function RecentButton(){
     return (
         
        
-        <Stack spacing={4} p={"30px"} w={"80%"} m={"auto"} direction='row' align='center'>
+        <Stack spacing={4} p={"30px"} w={"90%"} m={"auto"} direction='row' align='center'>
   <Button variant={"outline"} className={styles.btn} >
   <CiSearch/> <Heading as='h5'ml={"5px"} size='sm'>
   Abu Dhabhi

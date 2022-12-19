@@ -7,6 +7,7 @@ import RecentButton from "../component/Recentbtn";
 import Slider from "../component/Slider";
 import {data as array} from "../data"
 import Footer from "../component/footer"
+import { BsArrowRightCircleFill } from "react-icons/bs";
 
 export default function Home(){
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -77,6 +78,7 @@ export default function Home(){
     return <Link key={item.id} to={`/place/${item.id}`}> <Slider  title={item.title} content={item.content} img={item.imgUrl}/></Link>
 })}
 </div>
+<BsArrowRightCircleFill className={styles.righticon}/>
 
 
 {/* \*sliding window 2*\ */}
@@ -84,12 +86,12 @@ export default function Home(){
         <Text textAlign={"left"} >New Year's Eve spots to welcome 2023</Text>
 <div className={styles.sliding1}>
   
-{data.map((item)=>{
-    return  <Slider key={item.id} title={item.title} content={item.content} img={item.imgUrl}/>
+{array.abroad.map((item)=>{
+    return  <Link to={`/place/${item.id}`} key={item.id}><Slider  title={item.title}  img={item.imgUrl}/></Link> 
 })}
 </div>
 
-
+<BsArrowRightCircleFill className={styles.righticon}/>
  
         
      
@@ -102,10 +104,14 @@ export default function Home(){
        
 <div className={styles.sliding3sub}>
   
-{data.map((item)=>{
-    return <Slider key={item.id} title={item.title} content={item.content} img={item.imgUrl}/>
+{array.global.map((item)=>{
+    return <Link to={`/place/${item.id}`} key={item.id}><Slider  title={item.title}  img={item.imgUrl}/></Link> 
 })}
+
+
 </div>
+<BsArrowRightCircleFill className={styles.righticon}/>
+
 </div>
 
 
@@ -119,11 +125,11 @@ export default function Home(){
         <Text textAlign={"left"} >Recommended based on your activity</Text>
 <div className={styles.sliding4sub}>
   
-{data.map((item)=>{
-    return <Slider key={item.id} title={item.title} content={item.content} img={item.imgUrl}/>
+{array.beach.map((item)=>{
+    return <Link to={`/place/${item.id}`} key={item.id}><Slider  title={item.title}  img={item.imgUrl}/></Link> 
 })}
 </div>
-
+<BsArrowRightCircleFill className={styles.righticon}/>
 </div>
 <div className={styles.footerimg}>
   <img src="./Footer.png" alt="" />

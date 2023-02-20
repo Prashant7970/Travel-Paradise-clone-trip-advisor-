@@ -8,3 +8,5 @@ The subsidiaries of Tripadvisor, Inc. (NASDAQ:TRIP), own and operate a portfolio
 
 www.bokun.io, www.cruisecritic.com, www.flipkey.com, www.thefork.com,                           
 www.helloreco.com, www.holidaylettings.co.uk, www.housetrip.com, www.jetsetter.com,  www.niumba.com, www.seatguru.com, www.singleplatform.com, www.vacationhomerentals.com, and www.viator.com.
+<h1>Home Page </h1>
+<img src="https://cdn-production.checkfront.com/wp-content/uploads/2022/04/Boost-Tripadvisor-rankings-with-reviews.png" />

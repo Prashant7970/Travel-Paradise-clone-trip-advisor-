@@ -10,3 +10,13 @@ www.bokun.io, www.cruisecritic.com, www.flipkey.com, www.thefork.com,
 www.helloreco.com, www.holidaylettings.co.uk, www.housetrip.com, www.jetsetter.com,  www.niumba.com, www.seatguru.com, www.singleplatform.com, www.vacationhomerentals.com, and www.viator.com.
 <h1>Home Page </h1>
 <img src="https://cdn-production.checkfront.com/wp-content/uploads/2022/04/Boost-Tripadvisor-rankings-with-reviews.png" />
+## Dependencies Installed
+
+1. redux
+2. react-redux
+3. react-router-dom
+4. redux-thunk
+5. axios
+6. chakra-ui
+7. material ui
+8. react-icons

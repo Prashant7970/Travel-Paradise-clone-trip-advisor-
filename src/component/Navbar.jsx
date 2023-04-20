@@ -14,7 +14,7 @@ Image,
  
   Stack,
   useColorMode,
-  Center,
+
 
 
 
@@ -79,21 +79,9 @@ export default function Navbar() {
                   />
                 </MenuButton>
                 <MenuList alignItems={'center'}>
-                  <br />
-                  <Center>
-                    <Avatar
-                      size={'2xl'}
-                      src={'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e9/bb/default-avatar-2020-65.jpg?w=100&h=-1&s=1'}
-                    />
-                    {/* https://avatars.dicebear.com/api/male/username.svg */}
-                  </Center>
-                  <br />
-                  <Center>
-                    <p>Username</p>
-                  </Center>
-                  <br />
+                  
                   <MenuDivider />
-                  <MenuItem>Your Servers</MenuItem>
+                  <MenuItem>Your Bookings</MenuItem>
                   <Link to="/login"><MenuItem>Login</MenuItem></Link>
                   <MenuItem ><Button w={"100%"} onClick={handlelogin}> Logout</Button></MenuItem>
                 </MenuList>

@@ -19,7 +19,7 @@ export default function Home(){
     const data=array.local
     
     return (
-      <div>
+      <div style={{border:"1px solid red",width:"100%"}}>
     <div className={styles.headerimage}> 
         <NavButton handlemodal={handlemodal}/>
         <div style={{width:"90%", margin:"auto"}} >
@@ -28,7 +28,7 @@ export default function Home(){
             <div className={styles.input}>
                   
       <Input onClick={onOpen}
-       size={"lg"}
+       size={"md"}
        width={"100%"}
        variant={"filled"}
        borderRadius={"30px"}
@@ -78,7 +78,7 @@ export default function Home(){
     return <Link key={item.id} to={`/place/${item.id}`}> <Slider  title={item.title} content={item.content} img={item.imgUrl}/></Link>
 })}
 </div>
-<BsArrowRightCircleFill className={styles.righticon}/>
+{/* <BsArrowRightCircleFill className={styles.righticon}/> */}
 
 
 {/* \*sliding window 2*\ */}
@@ -90,8 +90,8 @@ export default function Home(){
     return  <Link to={`/place/${item.id}`} key={item.id}><Slider  title={item.title}  img={item.imgUrl}/></Link> 
 })}
 </div>
-
-<BsArrowRightCircleFill className={styles.righticon}/>
+{/* 
+<BsArrowRightCircleFill className={styles.righticon}/> */}
  
         
      
@@ -110,7 +110,7 @@ export default function Home(){
 
 
 </div>
-<BsArrowRightCircleFill className={styles.righticon}/>
+{/* <BsArrowRightCircleFill className={styles.righticon}/> */}
 
 </div>
 
@@ -129,7 +129,7 @@ export default function Home(){
     return <Link to={`/place/${item.id}`} key={item.id}><Slider  title={item.title}  img={item.imgUrl}/></Link> 
 })}
 </div>
-<BsArrowRightCircleFill className={styles.righticon}/>
+{/* <BsArrowRightCircleFill className={styles.righticon}/> */}
 </div>
 <div className={styles.footerimg}>
   <img src="./Footer.png" alt="" />

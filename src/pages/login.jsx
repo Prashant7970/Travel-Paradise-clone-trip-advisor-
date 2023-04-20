@@ -14,7 +14,7 @@ import {
   } from '@chakra-ui/react';
 import { useState } from 'react';
 import { useContext } from 'react';
-  import {Link} from "react-router-dom"
+  import {Link, useNavigate} from "react-router-dom"
 import SmallFooter from '../component/smallfooter';
 import { AuthContext } from '../context/Authcontext';
 import axios from "axios"
@@ -22,6 +22,7 @@ import axios from "axios"
     const {handlelogin}=useContext(AuthContext)
 const [email,setemail]=useState("")
 const [password,setpassword]=useState("")
+const navigate=useNavigate()
  function handlechange(e){
   let val=e.target.value 
   e.target.type==="email"?setemail(val):setpassword(val)
@@ -39,9 +40,16 @@ axios.post(`https://reqres.in/api/login`,{
     password:password
  
 }).then((res)=>{
-  res.status===200?handlelogin():console.log(res)
+if(res.status===200){
+  handlelogin()
+  console.log("okk")
+
+}else{
+  console.log("error")
+}
 })
 
+navigate("/")
 
     }
 
@@ -67,7 +75,7 @@ axios.post(`https://reqres.in/api/login`,{
             <Stack spacing={4}>
               <FormControl id="email">
                 <FormLabel>Email address</FormLabel>
-                <Input onChange={handlechange} type="email" />
+                <Input onChange={handlechange} type="email" value="eve.holt@reqres.in" />
               </FormControl>
               <FormControl id="password">
                 <FormLabel>Password</FormLabel>

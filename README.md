@@ -7,7 +7,7 @@ Tripadvisor, the world's largest travel guidance platform*, helps hundreds of mi
 The subsidiaries of Tripadvisor, Inc. (NASDAQ:TRIP), own and operate a portfolio of travel media brands and businesses, operating under various websites and apps, including the following websites:
 
 www.bokun.io, www.cruisecritic.com, www.flipkey.com, www.thefork.com,                           
-www.helloreco.com, www.holidaylettings.co.uk, www.housetrip.com, www.jetsetter.com,  www.niumba.com, www.seatguru.com, www.singleplatform.com, www.vacationhomerentals.com, and www.viator.com.
+www.helloreco.com, www.holidaylettings.co.uk, www.housetrip.com, www.jetsetter.com,  www.niumba.com, www.seatguru.com, www.singleplatform.com, www.vacationhomerentals.com, and www.viator.com..
 
 ## Dependencies Installed
 

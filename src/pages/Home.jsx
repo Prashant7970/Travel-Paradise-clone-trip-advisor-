@@ -1,19 +1,16 @@
-import NavButton from "../component/HeaderButton";
+
 import {Link} from "react-router-dom"
 
-import { Input,Heading,  Button,useDisclosure,Modal,ModalOverlay,ModalContent,ModalFooter,  Text,ModalBody,ModalHeader} from "@chakra-ui/react"
+import { Heading,   Text} from "@chakra-ui/react"
 import styles from "./Pages.module.css"
-import RecentButton from "../component/Recentbtn";
+
 import Slider from "../component/Slider";
 import {data as array} from "../data"
 import Footer from "../component/footer"
-import { BsArrowRightCircleFill } from "react-icons/bs";
+
 
 export default function Home(){
-    const { isOpen, onOpen, onClose } = useDisclosure()
-    function handlemodal(){
-        onOpen()
-    }
+   
    
 
     const data=array.local
@@ -21,54 +18,14 @@ export default function Home(){
     return (
       <div style={{border:"1px solid red",width:"100%"}}>
     <div className={styles.headerimage}> 
-        <NavButton handlemodal={handlemodal}/>
-        <div style={{width:"90%", margin:"auto"}} >
+     
+        <div style={{width:"100%", margin:"auto",marginTop:"100px"}} >
             <img src="https://static.tacdn.com/img2/brand/home/homemar2022_dt_trans.webp" alt="" />
             
-            <div className={styles.input}>
-                  
-      <Input onClick={onOpen}
-       size={"md"}
-       width={"100%"}
-       variant={"filled"}
-       borderRadius={"30px"}
-        type={'text' }
-        placeholder='Where To ?'
-      
-       
-      />
-        <Modal isOpen={isOpen} >
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader> <Input 
-       size={"lg"}
-       width={"100%"}
-       variant={"filled"}
-       borderRadius={"30px"}
-        type={'text' }
-        placeholder='Where To ?'
-      
-       
-      /></ModalHeader>
-           
-            <ModalBody>
-              <Text>Search</Text>
-            </ModalBody>
-  
-            <ModalFooter>
-              <Button colorScheme='blue' mr={3} onClick={onClose}>
-                Close
-              </Button>
-              <Button variant='ghost'>Secondary Action</Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
-            </div>
+         
         </div>
-        <Heading as='h3' fontFamily={"sans-serif"} size='lg'>
-    Your Recently Searches
-  </Heading>
-        <RecentButton/>
+     
+      
 
         <Heading as='h4' textAlign={"left"} fontFamily={"sans-serif"} size='md'>Ways to tour patna</Heading>
         <Text textAlign={"left"} >Book these experiences for a close-up look at Patna</Text>

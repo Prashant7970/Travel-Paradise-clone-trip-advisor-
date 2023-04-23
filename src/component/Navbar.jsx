@@ -50,15 +50,15 @@ export default function Navbar() {
       <Box>
         <Flex h={16} w={"80%"} margin={"auto"} alignItems={'center'} justifyContent={'space-between'}>
         <Link to="/">  <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-           <Box > <Image borderRadius={"60%"} w={"70px"} src={'./logo.jpg'} alt='logo' />  </Box><Text color={"black"} fontWeight={"bold"} fontSize={"25px"} fontFamily={"sans-serif"}>Travel Paradise</Text> 
+           <Box > <Image borderRadius={"60%"} w={["70px"]} display={["none","none","block"]} src={'./logo.jpg'} alt='logo' />  </Box><Text color={"black"} fontWeight={"bold"} fontSize={["14px","20px","25px"]} fontFamily={"sans-serif"}>Travel Paradise</Text> 
             </Flex></Link>
         
 
           <Flex alignItems={'center'}>
-            <Stack direction={'row'} spacing={7}>
-            <Button borderRadius={"17px"} color={"black"} bg={"white"}><FiEdit2 /> <Text ml={"10px"}> Review</Text></Button>
+            <Stack direction={'row'} spacing={["4","5","6","7"]}>
+            <Button borderRadius={"17px"} display={["none","none","flex"]} color={"black"} bg={"white"}><FiEdit2 /> <Text ml={"10px"}> Review</Text></Button>
             <Button borderRadius={"17px"} color={"black"} bg={"white"}> <FiHeart /> <Text ml={"10px"}> Trips</Text></Button>
-            <Button borderRadius={"17px"} color={"black"} bg={"white"}>
+            <Button borderRadius={"17px"} color={"black"} display={["none","none","flex"]} bg={"white"}>
               <FiBell/><Text ml={"10px"}> Alerts</Text></Button>
               <Button borderRadius={"17px"} color={"black"} bg={"white"} onClick={()=>{toggleColorMode()
              
@@ -86,7 +86,7 @@ export default function Navbar() {
                   <MenuItem ><Button w={"100%"} onClick={handlelogin}> Logout</Button></MenuItem>
                 </MenuList>
               </Menu>
-              <Button borderRadius={"17px"} color={"black"} bg={"white"}> <BsCart3/><Text ml={"10px"}> Basket</Text></Button>
+              <Button borderRadius={"17px"} color={"black"} display={["none","none","flex"]} bg={"white"}> <BsCart3/><Text ml={"10px"}> Basket</Text></Button>
              
             </Stack>
           </Flex>

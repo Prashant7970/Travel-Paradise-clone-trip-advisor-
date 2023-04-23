@@ -17,6 +17,8 @@ import {
    
   } from '@chakra-ui/react';
   import {data as array} from "../data"
+  import axios from 'axios';
+  import Model from '../component/Model';
 
 import { useParams } from 'react-router-dom';
 import Statistics from '../component/statics';
@@ -39,12 +41,31 @@ search=array.local
 }else{
   search=array.beach
 }
-console.log(search)
+
     let obj=search.filter((item)=>{
         
         return item.id===Number(id)
     })
-    console.log(obj)
+async function bookhotel(enter){
+  console.log()
+
+  let data= await axios.post(`https://mock4-1jhm.onrender.com/hotels`,{
+   title:enter.title,
+   content:enter.content,
+   description:enter.des,
+   url:enter.imgUrl
+  }
+  )
+    
+  
+  // let res=await data.json()
+  console.log(data)
+
+}
+
+
+
+  
     return (
       <Container maxW={'7xl'}>
      
@@ -156,11 +177,12 @@ console.log(search)
               bg={useColorModeValue('gray.900', 'gray.50')}
               color={useColorModeValue('white', 'gray.900')}
               textTransform={'uppercase'}
+             
               _hover={{
                 transform: 'translateY(2px)',
                 boxShadow: 'lg',
               }}>
-             Book Now
+             <Model/>
             </Button>
   
             <Stack direction="row" alignItems="center" justifyContent={'center'}>

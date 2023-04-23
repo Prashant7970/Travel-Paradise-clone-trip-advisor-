@@ -20,7 +20,7 @@ import { AuthContext } from '../context/Authcontext';
 import axios from "axios"
   export default function Login() {
     const {handlelogin}=useContext(AuthContext)
-const [email,setemail]=useState("")
+const [email,setemail]=useState("eve.holt@reqres.in")
 const [password,setpassword]=useState("")
 const navigate=useNavigate()
  function handlechange(e){

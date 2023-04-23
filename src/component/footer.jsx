@@ -134,7 +134,7 @@ export default function Footer() {
           </Stack>
          
         </Container>
-        <Text width={"50%"} position={"relative"} left={"180px"} textAlign={"left"}  fontSize={"12px"}>This is the version of our website addressed to speakers of English in India. If you are a resident of another country or region, please select the appropriate version of Tripadvisor for your country or region in the drop-down menu. more</Text>
+        <Text width={"50%"} position={"relative"} left={"170px"} textAlign={"left"}  fontSize={"12px"}>This is the version of our website addressed to speakers of English in India. If you are a resident of another country or region, please select the appropriate version of Tripadvisor for your country or region in the drop-down menu. more</Text>
       </Box >
     </Box>
   );

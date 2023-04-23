@@ -7,7 +7,7 @@ import {
     Image,
     Flex,
     VStack,
-    Button,
+    
     Heading,
     SimpleGrid,
     StackDivider,
@@ -17,7 +17,7 @@ import {
    
   } from '@chakra-ui/react';
   import {data as array} from "../data"
-  import axios from 'axios';
+ 
   import Model from '../component/Model';
 
 import { useParams } from 'react-router-dom';
@@ -46,22 +46,7 @@ search=array.local
         
         return item.id===Number(id)
     })
-async function bookhotel(enter){
-  console.log()
 
-  let data= await axios.post(`https://mock4-1jhm.onrender.com/hotels`,{
-   title:enter.title,
-   content:enter.content,
-   description:enter.des,
-   url:enter.imgUrl
-  }
-  )
-    
-  
-  // let res=await data.json()
-  console.log(data)
-
-}
 
 
 
@@ -168,22 +153,10 @@ async function bookhotel(enter){
              
             </Stack>
   
-            <Button
-              rounded={'none'}
-              w={'full'}
-              mt={8}
-              size={'lg'}
-              py={'7'}
-              bg={useColorModeValue('gray.900', 'gray.50')}
-              color={useColorModeValue('white', 'gray.900')}
-              textTransform={'uppercase'}
-             
-              _hover={{
-                transform: 'translateY(2px)',
-                boxShadow: 'lg',
-              }}>
-             <Model/>
-            </Button>
+            
+              
+             <Model props={obj[0]}/>
+           
   
             <Stack direction="row" alignItems="center" justifyContent={'center'}>
             

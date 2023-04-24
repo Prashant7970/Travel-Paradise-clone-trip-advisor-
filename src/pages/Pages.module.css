@@ -1,14 +1,8 @@
 .headerimage{
     width: 80%;
-    margin:10px auto;
+    margin:80px auto;
 }
-.input{
-    width: 50%;
-    margin: 0px auto;
-    position: absolute;
-    left: 20rem;
-    top: 13rem;
-}
+
 .sliding1{
     width: 100%;
    margin: 15px 0px;
@@ -69,20 +63,9 @@
 }
 
 @media screen and (min-width:600px) and (max-width:1100px){
-    .input{
-        width: 50%;
-      
-       
-        left: 9rem;
-        top: 12rem;
-    }
-    .input>input{
-        
-        font-size: 15px;
-        padding: 5px 5px;
-        height: auto;
-
-    }
+   .headerimage{
+    width: 90%;
+   }
 }
 
 @media screen and (min-width:320px) and (max-width:599px)  {
@@ -91,20 +74,10 @@
      
     }
 
-    .input{
-        width: 50%;
-      
-       
-        left: 7rem;
-        top: 11rem;
+    .sliding3sub{
+        width: 90%;
     }
-    .input>input{
-        
-        font-size: 10px;
-        padding: 2px 5px;
-        height: auto;
-
-    }
+   
     .footerimg{
         margin: 30px auto;
     }

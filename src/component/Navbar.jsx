@@ -57,7 +57,7 @@ export default function Navbar() {
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={["4","5","6","7"]}>
             <Button borderRadius={"17px"} display={["none","none","flex"]} color={"black"} bg={"white"}><FiEdit2 /> <Text ml={"10px"}> Review</Text></Button>
-            <Button borderRadius={"17px"} color={"black"} bg={"white"}> <FiHeart /> <Text ml={"10px"}> Trips</Text></Button>
+            <Button borderRadius={"17px"} color={"black"} bg={"white"}> <FiHeart /> <Text ml={"10px"}> <Link to="/mybooking">Trips</Link></Text></Button>
             <Button borderRadius={"17px"} color={"black"} display={["none","none","flex"]} bg={"white"}>
               <FiBell/><Text ml={"10px"}> Alerts</Text></Button>
               <Button borderRadius={"17px"} color={"black"} bg={"white"} onClick={()=>{toggleColorMode()
@@ -81,7 +81,7 @@ export default function Navbar() {
                 <MenuList alignItems={'center'}>
                   
                   <MenuDivider />
-                  <MenuItem>Your Bookings</MenuItem>
+                  <Link to="/mybooking">  <MenuItem>Your Bookings</MenuItem></Link>
                   <Link to="/login"><MenuItem>Login</MenuItem></Link>
                   <MenuItem ><Button w={"100%"} onClick={handlelogin}> Logout</Button></MenuItem>
                 </MenuList>

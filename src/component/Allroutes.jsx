@@ -5,6 +5,7 @@ import Login from "../pages/login"
 
 import SinglePage from "../pages/Singlepage"
 import PrivateRoute from "./PrivateRoute"
+import Mybooking from "../pages/Mybooking"
 
 
 
@@ -18,7 +19,7 @@ export default function Allroutes(){
 <Route path="/place/:id" element={<PrivateRoute><SinglePage/></PrivateRoute>}/>
 <Route path="/forget" element={<Forgot/>}/>
 
-<Route/>
+<Route path="/mybooking" element={<Mybooking/>}/>
 <Route/>
         </Routes>
     )

@@ -16,14 +16,14 @@ export default function Home(){
     const data=array.local
     
     return (
-      <div style={{border:"1px solid red",width:"100%"}}>
+      <div style={{width:"100%"}}>
     <div className={styles.headerimage}> 
      
-        <div style={{width:"100%", margin:"auto",marginTop:"100px"}} >
+       
             <img src="https://static.tacdn.com/img2/brand/home/homemar2022_dt_trans.webp" alt="" />
             
          
-        </div>
+      
      
       
 

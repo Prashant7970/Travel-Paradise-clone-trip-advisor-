@@ -19,31 +19,56 @@ import {
   Radio
   } from '@chakra-ui/react'
   import axios from 'axios';
-  import React from 'react'
+  import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function Model({props}) {
     const { isOpen, onOpen, onClose } = useDisclosure()
  const enter=props
+ const [name,setname]=useState("")
+ const [last,setlast]=useState("")
+ const [email,setemail]=useState("")
+ const [type,settype]=useState("local")
+ const [date,setdate]=useState("")
+ const navigate=useNavigate()
+
   
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
-    console.log(enter)
+    
     async function bookhotel(enter){
-        
+      let price=0
+      if(type==="Bussiness"){
+        price=enter.id*2*200
+      }else if(type==="Middle"){
+        price=enter.id*2*100
+      }else{
+        price=enter.id*2*50
+      }
       
-        let data= await axios.post(`https://mock4-1jhm.onrender.com/hotels`,{
+        await axios.post(`https://mock4-1jhm.onrender.com/hotels`,{
          title:enter.title,
          content:enter.content,
          description:enter.des,
-         url:enter.imgUrl
+         url:enter.imgUrl,
+         name:name+" "+last,
+         email:email,
+         type:type,
+         date:date,
+         price:price
+
+
         }
         )
+
+       navigate("/mybooking")
           
         
         // let res=await data.json()
-        console.log(data)
+    
       
       }
+      
   
     return (
       <>
@@ -75,27 +100,27 @@ export default function Model({props}) {
             <ModalBody pb={6}>
               <FormControl>
                 <FormLabel>First name</FormLabel>
-                <Input ref={initialRef} placeholder='First name' />
+                <Input ref={initialRef} onChange={(e)=>setname(e.target.value)} placeholder='First name' />
               </FormControl>
   
               <FormControl mt={4}>
                 <FormLabel>Last name</FormLabel>
-                <Input placeholder='Last name' />
+                <Input onChange={(e)=>setlast(e.target.value)} placeholder='Last name' />
               </FormControl>
               <FormControl>
   <FormLabel>Email address</FormLabel>
-  <Input type='email' />
+  <Input onChange={(e)=>setemail(e.target.value)} type="email" />
   <FormHelperText>We'll never share your email.</FormHelperText>
 </FormControl>
 <FormControl as='fieldset'>
   <FormLabel as='legend' htmlFor={null}>
    Select seat Type
   </FormLabel>
-  <RadioGroup defaultValue='local'>
+  <RadioGroup  defaultValue='local'>
     <HStack spacing='24px'>
-      <Radio value='Bussiness'>Bussiness ${enter.id*2*200}</Radio>
-      <Radio value='Middle'>Middle  ${enter.id*2*100}</Radio>
-      <Radio value='local'>Local  ${enter.id*2*50}</Radio>
+      <Radio onChange={(e)=>e.target.checked===true?settype(e.target.value):null} value='Bussiness'>Bussiness ${enter.id*2*200}</Radio>
+      <Radio onChange={(e)=>e.target.checked===true?settype(e.target.value):null} value='Middle'>Middle  ${enter.id*2*100}</Radio>
+      <Radio onChange={(e)=>e.target.checked===true?settype(e.target.value):null} value='local'>Local  ${enter.id*2*50}</Radio>
      
     </HStack>
   </RadioGroup>
@@ -106,6 +131,7 @@ export default function Model({props}) {
    Departure
   </FormLabel>
 <Input
+onChange={(e)=>setdate(e.target.value)}
  placeholder="Select Date and Time"
  size="md"
  type="datetime-local"
@@ -113,9 +139,10 @@ export default function Model({props}) {
             </ModalBody>
   
             <ModalFooter>
-              <Button colorScheme='blue' mr={3}>
+              <Button colorScheme='blue' onClick={()=>bookhotel(enter)} mr={3}>
                 BOOK
               </Button>
+            
               <Button onClick={onClose}>Cancel</Button>
             </ModalFooter>
           </ModalContent>

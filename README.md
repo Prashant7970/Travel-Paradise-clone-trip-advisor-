@@ -13,7 +13,7 @@ www.helloreco.com, www.holidaylettings.co.uk, www.housetrip.com, www.jetsetter.c
 
 1. redux
 2. react-redux
-3. react-router-dom
+3. react-router-dom  
 4. redux-thunk
 5. axios
 6. chakra-ui

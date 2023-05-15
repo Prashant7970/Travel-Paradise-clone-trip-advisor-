@@ -10,7 +10,6 @@ www.bokun.io, www.cruisecritic.com, www.flipkey.com, www.thefork.com,
 www.helloreco.com, www.holidaylettings.co.uk, www.housetrip.com, www.jetsetter.com,  www.niumba.com, www.seatguru.com, www.singleplatform.com, www.vacationhomerentals.com, and www.viator.com.
 
 ## Dependencies Installed
-
 1. redux
 2. react-redux
 3. react-router-dom  
